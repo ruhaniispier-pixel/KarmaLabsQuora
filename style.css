@@ -1098,3 +1098,7 @@ footer p {
     font-size: 8px;
   }
 }
+
+
+/* Sticky note removed intentionally */
+.sticky-note { display: none !important; }
