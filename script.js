@@ -3,9 +3,9 @@ const navMenu = document.getElementById("navMenu");
 
 if (menuBtn && navMenu) {
   menuBtn.addEventListener("click", () => {
-    const open = navMenu.classList.toggle("open");
-    menuBtn.setAttribute("aria-expanded", String(open));
-    menuBtn.textContent = open ? "✕" : "☰";
+    const isOpen = navMenu.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    menuBtn.textContent = isOpen ? "✕" : "☰";
   });
 
   navMenu.querySelectorAll("a").forEach(link => {

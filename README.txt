@@ -1,22 +1,23 @@
-KARMA LABS — QUORA MARKETING WEBSITE
+KARMA LABS QUORA WEBSITE
 
-FILES:
-- index.html
-- style.css
-- script.js
-- karma-labs-logo.jpg
+FILES
+-----
+index.html
+style.css
+script.js
+karma-labs-hero.png
 
-HOW TO OPEN:
-Double-click index.html.
-
-HOW TO DEPLOY:
-Upload all four files to the root of your GitHub repository.
-Import that repository into Vercel.
-
-IMPORTANT:
-1. The Results numbers are clearly marked as sample placeholders.
-   Replace them only with verified client data.
-2. Testimonials are sample placeholders.
-   Replace them with real approved client reviews.
-3. The email button currently uses hello@karmalabs.cc.
-   Change that email in index.html if needed.
+IMPORTANT
+---------
+1. Keep all four files in the SAME folder.
+2. Open index.html to preview locally.
+3. Upload all four files to the root of the GitHub repository.
+4. The hero image is the image you supplied.
+5. The layout intentionally avoids text/image overlap:
+   - Hero uses CSS Grid
+   - Hero image is a normal responsive <img>
+   - No text is absolutely positioned over the hero image
+   - Sections stack on tablet/mobile
+6. Result metrics and reviews are placeholders.
+   Replace them with verified real client data before launch.
+7. Email CTA currently uses hello@karmalabs.cc.
