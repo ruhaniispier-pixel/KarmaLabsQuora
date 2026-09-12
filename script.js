@@ -3,9 +3,9 @@ const navMenu = document.getElementById("navMenu");
 
 if (menuBtn && navMenu) {
   menuBtn.addEventListener("click", () => {
-    const open = navMenu.classList.toggle("open");
-    menuBtn.setAttribute("aria-expanded", String(open));
-    menuBtn.textContent = open ? "✕" : "☰";
+    const isOpen = navMenu.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    menuBtn.textContent = isOpen ? "✕" : "☰";
   });
 
   navMenu.querySelectorAll("a").forEach(link => {
@@ -17,13 +17,16 @@ if (menuBtn && navMenu) {
   });
 }
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
